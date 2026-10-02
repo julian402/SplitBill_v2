@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Respaldo y traspaso a otro celular (Android 12 en adelante): no se copia nada.
-
-    Todo lo que guarda la app es una copia de lo que esta en el servidor (splitbill.db) o depende de
-    este celular: el token esta cifrado con una llave del Android Keystore, que nunca sale del
-    dispositivo, asi que restaurado en otro celular no se podria leer. Los datos vuelven solos al
-    iniciar sesion y sincronizar.
+    Respaldo en la nube y traspaso a otro celular (Android 12 en adelante): no se copia nada.
+    La sesion, los recibos y el historial de la cuenta rapida se quedan solo en este celular;
+    los grupos y gastos estan en el servidor y se ven al iniciar sesion en cualquier dispositivo.
 -->
 <data-extraction-rules>
     <cloud-backup>

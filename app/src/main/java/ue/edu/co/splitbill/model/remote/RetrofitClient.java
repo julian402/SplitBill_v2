@@ -32,7 +32,7 @@ public class RetrofitClient {
             HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
             logging.setLevel(HttpLoggingInterceptor.Level.BASIC);
 
-            // Tiempos amplios: un servidor gratuito puede tardar en despertar
+            // Tiempos amplios por si el servidor tarda en responder
             OkHttpClient client = new OkHttpClient.Builder()
                     .addInterceptor(logging)
                     .connectTimeout(30, TimeUnit.SECONDS)

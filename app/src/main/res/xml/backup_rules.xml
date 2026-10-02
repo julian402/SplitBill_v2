@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Respaldo en Android 11 o anterior: no se copia nada, por la misma razon que en
-    data_extraction_rules.xml (los datos se recuperan del servidor y el token solo sirve en este
-    celular).
+    Respaldo en Android 11 o anterior: no se copia nada (mismas reglas que data_extraction_rules.xml).
 -->
 <full-backup-content>
     <exclude domain="root" path="." />
