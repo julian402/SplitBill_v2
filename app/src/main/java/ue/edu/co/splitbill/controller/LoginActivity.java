@@ -26,7 +26,7 @@ import ue.edu.co.splitbill.manager.SessionManager;
 import ue.edu.co.splitbill.model.AuthRepository;
 import ue.edu.co.splitbill.model.remote.RetrofitClient;
 
-// Primera pantalla. Si ya hay sesion guardada, salta directo al inicio
+// Iniciar sesion con correo y contrasena. MainActivity la abre cuando no hay sesion guardada
 public class LoginActivity extends AppCompatActivity {
 
     private EditText etEmail;
@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
     private String email;
     private String password;
 
-    // Si ya hay sesion se salta el login; si no, conecta los botones
+    // Arma la pantalla y conecta los botones
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,10 +51,6 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
         initObjects();
-        if (this.sessionManager.isLoggedIn()) {
-            goToHome();
-            return;
-        }
         this.btnLogin.setOnClickListener(this::login);
         this.btnGoToRegister.setOnClickListener(this::goToRegister);
     }

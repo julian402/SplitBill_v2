@@ -24,17 +24,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SplitBill">
 
-        <!-- La app arranca en el login; si ya hay sesion, salta al inicio -->
+        <!-- La app arranca en MainActivity, que decide si va al login o al inicio -->
         <activity
-            android:name=".controller.LoginActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".controller.LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".controller.RegisterActivity"
             android:windowSoftInputMode="adjustResize" />

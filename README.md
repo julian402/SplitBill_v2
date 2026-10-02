@@ -26,6 +26,7 @@ backend/                      Spring Boot 4 · Java 17 · Maven
   resources/schema.sql   las tablas, escritas a mano (prefijos use_, grp_, mem_, exp_ y status 0/1)
 
 app/                          Android · Java
+  MainActivity  pantalla principal (la que abre la app): manda al login o al inicio
   controller/   C  → las Activities (una por pantalla)
   view/         V  → adaptadores de RecyclerView y formato de pesos  (+ los XML de res/layout)
   model/        M  → repositorios: Retrofit para la API y SQLite para los recibos
