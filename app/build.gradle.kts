@@ -19,7 +19,6 @@ android {
     }
 
     defaultConfig {
-        // Distinto del SplitBill original para poder tener las dos apps instaladas a la vez
         applicationId = "ue.edu.co.splitbill.v2"
         minSdk = 26
         targetSdk = 36

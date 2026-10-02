@@ -1,5 +1,5 @@
-# Base de datos PostgreSQL de SplitBill v2. Se levanta con: docker compose up -d
-# Usa el puerto 5433 para no chocar con la base del SplitBill original (5432).
+# Base de datos PostgreSQL de SplitBill. Se levanta con: docker compose up -d
+# Usa el puerto 5433 para no chocar con otro PostgreSQL instalado en el equipo (5432).
 name: splitbill2
 
 services:

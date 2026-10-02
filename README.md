@@ -1,7 +1,6 @@
-# SplitBill v2
+# SplitBill
 
 App Android (Java) para dividir gastos entre amigos, con una API en Spring Boot y PostgreSQL.
-Es la versión simplificada de SplitBill: mismas ideas y mismo diseño, menos funciones.
 
 ## Cómo cumple los requisitos del proyecto
 
@@ -47,7 +46,7 @@ Integrantes · Nuevo/editar gasto · Liquidación · Cuenta rápida · Mis recib
    cd backend
    docker compose up -d
    ```
-   Usa el puerto **5433** para no chocar con la base del SplitBill original.
+   Usa el puerto **5433** para no chocar con otro PostgreSQL instalado en el equipo.
 2. **API**:
    ```
    cd backend
@@ -55,12 +54,10 @@ Integrantes · Nuevo/editar gasto · Liquidación · Cuenta rápida · Mis recib
    ```
    Queda en `http://localhost:8080`. Las tablas se crean solas con `schema.sql`.
    Pruebas del cálculo: `./mvnw test`.
-3. **App**: abrir la carpeta `SplitBill_v2` en Android Studio y darle Run.
+3. **App**: abrir la carpeta del proyecto en Android Studio y darle Run.
    - En el **emulador** funciona tal cual (usa `http://10.0.2.2:8080/`).
    - En un **celular físico**: en `local.properties` poner
      `splitbill.apiBaseUrl=http://localhost:8080/` y correr `adb reverse tcp:8080 tcp:8080`.
-
-La app se instala como `ue.edu.co.splitbill.v2`, así que puede convivir con el SplitBill original.
 
 ## Endpoints
 

@@ -1,4 +1,4 @@
--- Esquema de SplitBill v2. Columnas con prefijo de 3 letras y borrado logico con status 0/1.
+-- Esquema de SplitBill. Columnas con prefijo de 3 letras y borrado logico con status 0/1.
 -- Los montos son pesos enteros (BIGINT), nunca decimales con coma flotante.
 
 CREATE TABLE IF NOT EXISTS users (
