@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: splitbill-api
+  # Conexion a PostgreSQL. Por defecto la del docker-compose; en otro servidor se cambian con variables de entorno
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5433/splitbill2}
+    username: ${DB_USER:splitbill}
+    password: ${DB_PASSWORD:splitbill}
+  jpa:
+    # Las tablas las crea schema.sql (escrito a mano), no Hibernate
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+  sql:
+    init:
+      # Ejecuta schema.sql en cada arranque (usa CREATE TABLE IF NOT EXISTS, no borra datos)
+      mode: always

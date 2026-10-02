@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controller.GroupDetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="12dp">
+
+            <LinearLayout style="@style/Widget.SplitBill.ScreenHeader">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    style="@style/Widget.SplitBill.HeaderButton"
+                    android:contentDescription="@string/cdBack"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <LinearLayout style="@style/Widget.SplitBill.ScreenHeaderTexts">
+
+                    <TextView
+                        android:id="@+id/tvGroupTitle"
+                        style="@style/Widget.SplitBill.ScreenHeaderTitle"
+                        tools:text="Viaje a Cartagena" />
+
+                    <TextView
+                        android:id="@+id/tvGroupDescription"
+                        style="@style/Widget.SplitBill.ScreenHeaderSubtitle"
+                        tools:text="Vacaciones de diciembre" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnEditGroup"
+                    style="@style/Widget.SplitBill.HeaderButton"
+                    android:contentDescription="@string/cdEditGroup"
+                    android:src="@drawable/ic_edit" />
+            </LinearLayout>
+
+            <!-- Tarjeta destacada: total del grupo y accesos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_hero"
+                android:elevation="6dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvGroupTotalLabel"
+                    android:textColor="@color/colorOnHeroSecondary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvGroupTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:maxLines="1"
+                    android:text="@string/tvZero"
+                    android:textColor="@color/colorOnHero"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="36sp"
+                    app:autoSizeMinTextSize="22sp"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/tvGroupMembers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorOnHeroSecondary"
+                    android:textSize="15sp"
+                    app:drawableStartCompat="@drawable/ic_group"
+                    app:drawableTint="@color/colorOnHero"
+                    tools:text="3 integrantes" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnMembers"
+                        style="@style/Widget.SplitBill.Button.OnHero"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:text="@string/btnMembers"
+                        app:icon="@drawable/ic_person_add" />
+
+                    <Button
+                        android:id="@+id/btnSettle"
+                        style="@style/Widget.SplitBill.Button.OnHero"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:text="@string/btnSettle"
+                        app:icon="@drawable/ic_swap" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Widget.SplitBill.SectionHeader">
+
+                <TextView
+                    style="@style/Widget.SplitBill.SectionHeaderTitle"
+                    android:text="@string/tvSectionExpenses" />
+            </LinearLayout>
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/pbLoading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:trackCornerRadius="4dp" />
+
+            <TextView
+                android:id="@+id/tvEmptyExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="12dp"
+                android:padding="28dp"
+                android:text="@string/tvEmptyExpenses"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextSecondary"
+                android:visibility="gone"
+                app:drawableTint="@color/colorStroke"
+                app:drawableTopCompat="@drawable/ic_receipt" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_expense" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddExpense"
+        style="@style/Widget.SplitBill.Button.Big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/btnAddExpense"
+        app:icon="@drawable/ic_add" />
+</LinearLayout>

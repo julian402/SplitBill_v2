@@ -1,0 +1,187 @@
+<resources>
+    <string name="app_name">SplitBill</string>
+    <string name="tvAppName">SplitBill</string>
+
+    <!-- Comunes -->
+    <string name="btnCancel">Cancelar</string>
+    <string name="btnDelete">Eliminar</string>
+    <string name="btnUpdate">Actualizar</string>
+    <string name="cdBack">Volver</string>
+    <string name="tvZero">$ 0</string>
+    <string name="msgConnectionError">No se pudo conectar con el servidor. Revisa tu conexión.</string>
+    <string name="msgLoadError">No se pudieron cargar los datos</string>
+    <string name="msgSaveError">No se pudo guardar</string>
+    <string name="msgDeleteError">No se pudo eliminar</string>
+    <string name="errAmount">Escribe un valor mayor que cero</string>
+    <string name="errDescription">Escribe una descripción</string>
+
+    <!-- Login y registro -->
+    <string name="tvLoginSubtitle">Divide los gastos con tus amigos</string>
+    <string name="tvSectionLogin">Iniciar sesión</string>
+    <string name="etEmail">Correo electrónico</string>
+    <string name="etPassword">Contraseña</string>
+    <string name="etConfirmPassword">Confirmar contraseña</string>
+    <string name="etName">Nombre</string>
+    <string name="btnLogin">Entrar</string>
+    <string name="btnGoToRegister">¿No tienes cuenta? Regístrate</string>
+    <string name="tvTitleRegister">Crear cuenta</string>
+    <string name="tvRegisterSubtitle">Tu contraseña se guarda cifrada</string>
+    <string name="btnRegister">Crear cuenta</string>
+    <string name="msgLoginError">No se pudo iniciar sesión</string>
+    <string name="msgRegisterError">No se pudo crear la cuenta</string>
+    <string name="msgWelcome">¡Bienvenido, %1$s!</string>
+    <string name="errEmail">Escribe un correo válido</string>
+    <string name="errPasswordRequired">Escribe tu contraseña</string>
+    <string name="errPasswordLength">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="errPasswordMatch">Las contraseñas no coinciden</string>
+    <string name="errNameRequired">Escribe tu nombre</string>
+
+    <!-- Inicio -->
+    <string name="tvGreeting">Hola, %1$s</string>
+    <string name="cdLogout">Cerrar sesión</string>
+    <string name="tvHomeTotalLabel">Total en tus grupos</string>
+    <string name="tvQuickSplitCard">Cuenta rápida</string>
+    <string name="tvQuickSplitCardSub">Dividir con propina</string>
+    <string name="tvReceiptsCard">Mis recibos</string>
+    <string name="tvReceiptsCardSub">Fotos guardadas</string>
+    <string name="tvTitleGroups">Tus grupos</string>
+    <string name="btnNewGroup">Nuevo grupo</string>
+    <string name="tvEmptyGroups">Aún no tienes grupos. Crea el primero.</string>
+    <string name="dlgLogoutTitle">Cerrar sesión</string>
+    <string name="dlgLogoutMessage">¿Quieres salir de tu cuenta?</string>
+    <string name="btnLogout">Salir</string>
+
+    <!-- Grupo -->
+    <string name="tvTitleNewGroup">Nuevo grupo</string>
+    <string name="tvTitleEditGroup">Editar grupo</string>
+    <string name="tvGroupFormSubtitle">Tú quedas como primer integrante</string>
+    <string name="etGroupName">Nombre del grupo</string>
+    <string name="etGroupDescription">Descripción (opcional)</string>
+    <string name="btnSaveGroup">Guardar grupo</string>
+    <string name="btnDeleteGroup">Eliminar grupo</string>
+    <string name="errGroupName">Escribe el nombre del grupo</string>
+    <string name="msgGroupCreated">Grupo creado</string>
+    <string name="msgGroupUpdated">Grupo actualizado</string>
+    <string name="msgGroupDeleted">Grupo eliminado</string>
+    <string name="dlgDeleteGroupTitle">Eliminar grupo</string>
+    <string name="dlgDeleteGroupMessage">El grupo y sus gastos dejarán de aparecer. ¿Continuar?</string>
+    <string name="cdEditGroup">Editar grupo</string>
+    <string name="tvGroupTotalLabel">Total gastado</string>
+    <string name="tvNoDescription">Sin descripción</string>
+    <string name="btnMembers">Integrantes</string>
+    <string name="btnSettle">Liquidar</string>
+    <string name="tvSectionExpenses">Gastos</string>
+    <string name="tvEmptyExpenses">Aún no hay gastos. Agrega el primero.</string>
+    <string name="btnAddExpense">Agregar gasto</string>
+    <string name="tvPaidBy">Pagó %1$s · %2$s</string>
+    <string name="tvPerPersonShort">%1$s c/u</string>
+
+    <!-- Integrantes -->
+    <string name="tvTitleMembers">Integrantes</string>
+    <string name="tvMembersSubtitle">Toca a alguien para editarlo</string>
+    <string name="etMemberName">Nombre</string>
+    <string name="etMemberPhone">Teléfono (opcional)</string>
+    <string name="btnAddMember">Agregar</string>
+    <string name="btnFromContacts">Contactos</string>
+    <string name="tvNoPhone">Sin teléfono</string>
+    <string name="cdDeleteMember">Eliminar integrante</string>
+    <string name="errMemberName">Escribe el nombre</string>
+    <string name="msgMemberAdded">Integrante agregado</string>
+    <string name="msgMemberUpdated">Integrante actualizado</string>
+    <string name="msgMemberDeleted">Integrante eliminado</string>
+    <string name="dlgDeleteMemberTitle">Eliminar integrante</string>
+    <string name="dlgDeleteMemberMessage">¿Eliminar a %1$s del grupo?</string>
+    <string name="dlgPickContact">Escoge un contacto</string>
+    <string name="msgContactsDenied">Sin el permiso de contactos puedes escribir el nombre a mano</string>
+    <string name="msgNoContacts">No hay contactos con teléfono</string>
+
+    <!-- Gasto -->
+    <string name="tvTitleNewExpense">Nuevo gasto</string>
+    <string name="tvTitleEditExpense">Editar gasto</string>
+    <string name="tvExpenseFormSubtitle">Se reparte en partes iguales</string>
+    <string name="etExpenseDescription">Descripción (ej. Almuerzo)</string>
+    <string name="etExpenseAmount">Valor en pesos</string>
+    <string name="tvPayerLabel">¿Quién pagó?</string>
+    <string name="btnSaveExpense">Guardar gasto</string>
+    <string name="btnDeleteExpense">Eliminar gasto</string>
+    <string name="errPayer">Escoge quién pagó</string>
+    <string name="msgExpenseAdded">Gasto agregado</string>
+    <string name="msgExpenseUpdated">Gasto actualizado</string>
+    <string name="msgExpenseDeleted">Gasto eliminado</string>
+    <string name="dlgDeleteExpenseTitle">Eliminar gasto</string>
+    <string name="dlgDeleteExpenseMessage">¿Seguro que quieres eliminar este gasto?</string>
+
+    <!-- Liquidacion -->
+    <string name="tvTitleSettlement">Liquidación</string>
+    <string name="tvSettleCalculated">Calculado por el servidor</string>
+    <string name="tvSettleMembersLabel">Personas</string>
+    <string name="tvSettlePerPersonLabel">Cada uno</string>
+    <string name="tvSectionBalances">Saldos</string>
+    <string name="tvSectionTransfers">Quién le paga a quién</string>
+    <string name="tvNoTransfers">Todos están a paz y salvo</string>
+    <string name="tvBalanceDetail">Pagó %1$s · le tocaba %2$s</string>
+    <string name="tvOwedToYou">Le deben %1$s</string>
+    <string name="tvOwes">Debe %1$s</string>
+    <string name="tvSettled">Al día</string>
+    <string name="tvTransferNames">%1$s → %2$s</string>
+
+    <!-- Cuenta rapida -->
+    <string name="tvTitleQuickSplit">Cuenta rápida</string>
+    <string name="tvQuickSubtitle">Sin crear un grupo</string>
+    <string name="etSubtotal">Valor de la cuenta</string>
+    <string name="etTipPercent">Propina %</string>
+    <string name="etPeople">Personas</string>
+    <string name="btnCalculate">Calcular</string>
+    <string name="tvQuickPerPersonLabel">Cada persona paga</string>
+    <string name="tvQuickTipLabel">Propina</string>
+    <string name="tvQuickTotalLabel">Total</string>
+    <string name="tvQuickRemainder">Como no da exacto, %1$d persona(s) paga(n) %2$s</string>
+    <string name="msgCalculateError">No se pudo calcular</string>
+    <string name="errTip">La propina va de 0 a 100</string>
+    <string name="errPeople">Entre 1 y 50 personas</string>
+    <string name="tvSectionHistory">Últimos cálculos</string>
+    <string name="tvClearHistory">Borrar</string>
+    <string name="tvEmptyHistory">Tus cálculos se guardan aquí (Room)</string>
+    <string name="tvHistoryDetail">%1$s + %2$d %% entre %3$d</string>
+
+    <!-- Recibos -->
+    <string name="tvTitleReceipts">Mis recibos</string>
+    <string name="tvEmptyReceipts">Aún no tienes recibos. Toma la foto del primero.</string>
+    <string name="btnAddReceipt">Nuevo recibo</string>
+    <string name="tvTitleNewReceipt">Nuevo recibo</string>
+    <string name="tvTitleEditReceipt">Editar recibo</string>
+    <string name="tvReceiptFormSubtitle">Se guarda solo en este celular</string>
+    <string name="tvPhotoHint">Sin foto</string>
+    <string name="btnTakePhoto">Tomar foto</string>
+    <string name="btnRetakePhoto">Tomar otra foto</string>
+    <string name="etReceiptDescription">Descripción (ej. Mercado)</string>
+    <string name="etReceiptAmount">Valor en pesos</string>
+    <string name="btnSaveReceipt">Guardar recibo</string>
+    <string name="btnDeleteReceipt">Eliminar recibo</string>
+    <string name="msgReceiptSaved">Recibo guardado</string>
+    <string name="msgReceiptUpdated">Recibo actualizado</string>
+    <string name="msgReceiptDeleted">Recibo eliminado</string>
+    <string name="msgReceiptNotFound">El recibo no existe</string>
+    <string name="msgCameraDenied">Sin el permiso de cámara no se puede tomar la foto</string>
+    <string name="msgPhotoError">No se pudo abrir la cámara</string>
+    <string name="dlgDeleteReceiptTitle">Eliminar recibo</string>
+    <string name="dlgDeleteReceiptMessage">¿Seguro que quieres eliminar este recibo?</string>
+    <string name="cdReceiptPhoto">Foto del recibo</string>
+
+    <plurals name="membersCount">
+        <item quantity="one">%d integrante</item>
+        <item quantity="other">%d integrantes</item>
+    </plurals>
+    <plurals name="groupsCount">
+        <item quantity="one">%d grupo</item>
+        <item quantity="other">%d grupos</item>
+    </plurals>
+    <plurals name="splitInfo">
+        <item quantity="one">Se divide entre %d integrante</item>
+        <item quantity="other">Se divide en partes iguales entre %d integrantes</item>
+    </plurals>
+    <plurals name="receiptsSummary">
+        <item quantity="one">%1$d recibo · %2$s</item>
+        <item quantity="other">%1$d recibos · %2$s</item>
+    </plurals>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controller.ExpenseFormActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp">
+
+            <LinearLayout
+                style="@style/Widget.SplitBill.ScreenHeader"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    style="@style/Widget.SplitBill.HeaderButton"
+                    android:contentDescription="@string/cdBack"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <LinearLayout style="@style/Widget.SplitBill.ScreenHeaderTexts">
+
+                    <TextView
+                        android:id="@+id/tvFormTitle"
+                        style="@style/Widget.SplitBill.ScreenHeaderTitle"
+                        android:text="@string/tvTitleNewExpense" />
+
+                    <TextView
+                        style="@style/Widget.SplitBill.ScreenHeaderSubtitle"
+                        android:text="@string/tvExpenseFormSubtitle" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/pbLoading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:trackCornerRadius="4dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/etExpenseDescription"
+                        app:startIconDrawable="@drawable/ic_description">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapSentences"
+                            android:maxLength="120" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="@string/etExpenseAmount"
+                        app:startIconDrawable="@drawable/ic_wallet">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="12" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/tvPayerLabel"
+                        android:textAppearance="@style/TextAppearance.SplitBill.FieldLabel" />
+
+                    <Spinner
+                        android:id="@+id/spPayer"
+                        style="@style/Widget.SplitBill.Spinner" />
+
+                    <TextView
+                        android:id="@+id/tvSplitInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:textAppearance="@style/TextAppearance.SplitBill.ItemSubtitle"
+                        app:drawableStartCompat="@drawable/ic_group"
+                        app:drawableTint="@color/colorPrimary"
+                        tools:text="Se divide en partes iguales entre 3 integrantes" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/btnDeleteExpense"
+                style="@style/Widget.SplitBill.Button.Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/btnDeleteExpense"
+                android:textColor="@color/colorDebtor"
+                android:visibility="gone"
+                app:icon="@drawable/ic_delete"
+                app:iconTint="@color/colorDebtor" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveExpense"
+        style="@style/Widget.SplitBill.Button.Big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/btnSaveExpense"
+        app:icon="@drawable/ic_check" />
+</LinearLayout>

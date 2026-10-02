@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.SettlementActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <LinearLayout style="@style/Widget.SplitBill.ScreenHeader">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                style="@style/Widget.SplitBill.HeaderButton"
+                android:contentDescription="@string/cdBack"
+                android:src="@drawable/ic_arrow_back" />
+
+            <LinearLayout style="@style/Widget.SplitBill.ScreenHeaderTexts">
+
+                <TextView
+                    style="@style/Widget.SplitBill.ScreenHeaderTitle"
+                    android:text="@string/tvTitleSettlement" />
+
+                <TextView
+                    android:id="@+id/tvSettleSubtitle"
+                    style="@style/Widget.SplitBill.ScreenHeaderSubtitle"
+                    tools:text="Viaje a Cartagena" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/pbLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:trackCornerRadius="4dp" />
+
+        <!-- Resumen: total, personas y cuanto le toca a cada uno -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_hero"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvGroupTotalLabel"
+                android:textColor="@color/colorOnHeroSecondary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvSettleTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:maxLines="1"
+                android:text="@string/tvZero"
+                android:textColor="@color/colorOnHero"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="34sp"
+                app:autoSizeMinTextSize="20sp"
+                app:autoSizeTextType="uniform" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout style="@style/Widget.SplitBill.HeroStat">
+
+                    <TextView
+                        style="@style/Widget.SplitBill.HeroStatLabel"
+                        android:text="@string/tvSettleMembersLabel"
+                        app:drawableStartCompat="@drawable/ic_group" />
+
+                    <TextView
+                        android:id="@+id/tvSettleMembers"
+                        style="@style/Widget.SplitBill.HeroStatValue"
+                        tools:text="3" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/Widget.SplitBill.HeroStat">
+
+                    <TextView
+                        style="@style/Widget.SplitBill.HeroStatLabel"
+                        android:text="@string/tvSettlePerPersonLabel"
+                        app:drawableStartCompat="@drawable/ic_person" />
+
+                    <TextView
+                        android:id="@+id/tvSettlePerPerson"
+                        style="@style/Widget.SplitBill.HeroStatValue"
+                        tools:text="$ 40.000" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:text="@string/tvSettleCalculated"
+                android:textColor="@color/colorOnHeroSecondary"
+                android:textSize="12sp"
+                app:drawableStartCompat="@drawable/ic_check_circle"
+                app:drawableTint="@color/colorOnHero" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Widget.SplitBill.SectionHeader">
+
+            <TextView
+                style="@style/Widget.SplitBill.SectionHeaderTitle"
+                android:text="@string/tvSectionTransfers" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNoTransfers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_card"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="18dp"
+            android:text="@string/tvNoTransfers"
+            android:textColor="@color/colorCreditor"
+            android:visibility="gone"
+            app:drawableStartCompat="@drawable/ic_check_circle"
+            app:drawableTint="@color/colorCreditor" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTransfers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_transfer" />
+
+        <LinearLayout style="@style/Widget.SplitBill.SectionHeader">
+
+            <TextView
+                style="@style/Widget.SplitBill.SectionHeaderTitle"
+                android:text="@string/tvSectionBalances" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBalances"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_balance" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

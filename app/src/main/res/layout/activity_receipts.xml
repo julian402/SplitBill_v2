@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controller.ReceiptsActivity">
+
+    <LinearLayout style="@style/Widget.SplitBill.ScreenHeader">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            style="@style/Widget.SplitBill.HeaderButton"
+            android:contentDescription="@string/cdBack"
+            android:src="@drawable/ic_arrow_back" />
+
+        <LinearLayout style="@style/Widget.SplitBill.ScreenHeaderTexts">
+
+            <TextView
+                style="@style/Widget.SplitBill.ScreenHeaderTitle"
+                android:text="@string/tvTitleReceipts" />
+
+            <TextView
+                android:id="@+id/tvReceiptsSummary"
+                style="@style/Widget.SplitBill.ScreenHeaderSubtitle"
+                tools:text="3 recibos · $ 245.000" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReceipts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="8dp"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_receipt" />
+
+        <TextView
+            android:id="@+id/tvEmptyReceipts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="12dp"
+            android:padding="28dp"
+            android:text="@string/tvEmptyReceipts"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextSecondary"
+            android:visibility="gone"
+            app:drawableTint="@color/colorStroke"
+            app:drawableTopCompat="@drawable/ic_camera" />
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddReceipt"
+        style="@style/Widget.SplitBill.Button.Big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/btnAddReceipt"
+        app:icon="@drawable/ic_camera" />
+</LinearLayout>

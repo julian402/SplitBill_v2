@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Un pago sugerido: quien le paga a quien y cuanto -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <ImageView
+            style="@style/Widget.SplitBill.IconCircle"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_swap"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvTransferNames"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.SplitBill.ItemTitle"
+            tools:text="Caro → Ana" />
+
+        <TextView
+            android:id="@+id/tvTransferAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/TextAppearance.SplitBill.Amount"
+            android:textColor="@color/colorPrimary"
+            tools:text="$ 40.000" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

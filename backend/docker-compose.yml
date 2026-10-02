@@ -1,0 +1,20 @@
+# Base de datos PostgreSQL de SplitBill v2. Se levanta con: docker compose up -d
+# Usa el puerto 5433 para no chocar con la base del SplitBill original (5432).
+name: splitbill2
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: splitbill2-postgres
+    environment:
+      POSTGRES_DB: splitbill2
+      POSTGRES_USER: splitbill
+      POSTGRES_PASSWORD: splitbill
+    ports:
+      - "5433:5432"
+    volumes:
+      - splitbill2-data:/var/lib/postgresql/data
+
+volumes:
+  splitbill2-data:
+    name: splitbill2-data
